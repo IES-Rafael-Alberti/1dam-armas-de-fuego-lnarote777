@@ -41,7 +41,7 @@ open class ArmaDeFuego(
     /**
      * Método para recargar el arma
      */
-    fun recarga(){
+    private fun recarga(){
         if (cantidadMunicionExtra >= (municionARestar * 2)){
             municion += municionARestar * 2
             cantidadMunicionExtra -= municionARestar * 2
@@ -57,8 +57,6 @@ open class ArmaDeFuego(
 
     /**
      * Muestra la información completa de cada arma
-     *
-     * @return Cadena de caracteres con la información
      */
     fun mostrarInfo(){
         println("Nombre: $nombre, Munición: $municion, Tipo de munición: $tipoMunicion, Daño: $danio, Radio: $radio")
@@ -85,7 +83,7 @@ class Pistola(
     tipoMunicion: String) : ArmaDeFuego("Pistola", municion, municionARestar, tipoMunicion, "Reducido", (1..5).random() )
 
 /**
- * Clase Pistola que hereda de la clase ArmaDeFuego
+ * Clase Rifle que hereda de la clase ArmaDeFuego
  *
  * @param nombre Nombre del arma ("Rifle").
  * @param municion Cantidad inicial de munición.
@@ -101,7 +99,7 @@ class Rifle(
     tipoMunicion: String): ArmaDeFuego("Rifle", municion, municionARestar, tipoMunicion, "Intermedio", (5..10).random() )
 
 /**
- * Clase Pistola que hereda de la clase ArmaDeFuego
+ * Clase Bazooka que hereda de la clase ArmaDeFuego
  *
  * @param nombre Nombre del arma ("Bazooka").
  * @param municion Cantidad inicial de munición.
