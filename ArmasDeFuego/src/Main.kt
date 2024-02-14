@@ -20,6 +20,6 @@ fun main() {
 
     println("\nDisparos de otros objetos:\n")
 
-    // disparos de otros objetos.
+    // disparos de otros objetos
     otrosObjetos.forEach { it.dispara() }
 }
