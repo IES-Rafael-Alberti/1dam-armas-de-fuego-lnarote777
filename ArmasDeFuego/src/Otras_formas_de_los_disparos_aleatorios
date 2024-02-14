@@ -1,0 +1,22 @@
+//Con .forEach { }
+    disparos.forEach { (arma, veces) ->
+            for (i in 1..veces)
+            arma.dispara()
+            arma.mostrarInfo()
+        }
+
+//Desestructurando el map ( Pair )
+    var indice = 1
+    for (disparo in disparos) {
+
+        val (arma, veces) = disparo
+
+        println()
+        println("Disparo: $indice ")
+        indice++
+        for (i in 1..veces){
+            arma.dispara()
+            arma.mostrarInfo()
+        }
+    }
+
