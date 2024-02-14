@@ -17,7 +17,7 @@ fun main() {
     var indice = 1
     for (disparo in disparos) {
         println()
-        println("Disparo: $indice ")
+        println("***Disparo: $indice ")
         indice++
         for (i in 1..disparo.second){
             disparo.first.dispara()
