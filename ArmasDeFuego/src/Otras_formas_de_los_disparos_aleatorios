@@ -6,6 +6,7 @@
         }
 
 //Desestructurando el map ( Pair )
+
     var indice = 1
     for (disparo in disparos) {
 
