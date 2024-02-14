@@ -11,12 +11,19 @@ fun main() {
 
     println("\nMunición extra = ${ArmaDeFuego.cantidadMunicionExtra} para todas las armas de fuego.\n")
 
-    //TODO: generar aleatoriamente los disparos
     val disparos = (1..12).map { armas.random() to (1..3).random() }
 
-    //TODO: Realización de los disparos con el numero de disparos aleatorio
     println("Comienzo disparos -- PIUM PIUM")
-    for (disparos )
+    var indice = 1
+    for (disparo in disparos) {
+        println()
+        println("Disparo: $indice ")
+        indice++
+        for (i in 1..disparo.second){
+            disparo.first.dispara()
+            disparo.first.mostrarInfo()
+        }
+    }
 
     println("\nDisparos de otros objetos:\n")
 
