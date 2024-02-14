@@ -60,8 +60,8 @@ open class ArmaDeFuego(
      *
      * @return Cadena de caracteres con la información
      */
-    open fun mostrarInfo(): String{
-        return "Nombre: $nombre, Munición: $municion, Tipo de munición: $tipoMunicion, Daño: $danio, Radio: $radio"
+    fun mostrarInfo(){
+        println("Nombre: $nombre, Munición: $municion, Tipo de munición: $tipoMunicion, Daño: $danio, Radio: $radio")
     }
 
 

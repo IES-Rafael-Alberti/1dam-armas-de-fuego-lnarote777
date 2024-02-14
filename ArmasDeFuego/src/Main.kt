@@ -1,3 +1,4 @@
+import kotlin.random.Random
 
 fun main() {
     // Lista de armas de fuego
@@ -11,8 +12,9 @@ fun main() {
     println("\nMunición extra = ${ArmaDeFuego.cantidadMunicionExtra} para todas las armas de fuego.\n")
 
     //TODO: generar aleatoriamente los disparos
+    val disparos = (1..12).map { Random.nextInt(0, armasDeFuego.size) to Random.nextInt(1, 4) }
 
-    //TODO: Realizacion de los disparos con el numero de disparos aleatorio
+    //TODO: Realización de los disparos con el numero de disparos aleatorio
     println("Comienzo disparos -- PIUM PIUM")
     armasDeFuego.forEach { it.dispara() }
 
